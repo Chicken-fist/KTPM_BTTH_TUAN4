@@ -14,5 +14,6 @@ public interface MayBayRepository extends JpaRepository<MayBay, Integer> {
 	@Query(value = "select * from maybay where TamBay > 10000", nativeQuery = true)
 	List<MayBay> getMayBayByTamBay();
 	
+	
 
 }

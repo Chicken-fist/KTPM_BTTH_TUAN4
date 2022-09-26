@@ -23,5 +23,11 @@ public class ChuyenBayController {
 		return chuyenBayRepository.findChuyenBayByGaDen("DAD");
 	}
 	
+	@GetMapping("/doDaiLonHon10000VaBeHon8000")
+	public List<ChuyenBay> getChuyenBayCoDoDaiLonHon10000VaBeHon8000(){
+		
+		return chuyenBayRepository.findChuyenBayCoDoDaiLonHon10000VaBeHon8000();
+	}
+	
 
 }

@@ -1,5 +1,6 @@
 package com.jpademospringboot.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,38 @@ public class NhanVienController {
 	public List<NhanVien> getNhanVienLuongDuoiChiDinh(){
 		
 		return nhanVienRepository.findNhanVienCoLuongDuoiLuongChiDinh();
+	}
+	
+	@GetMapping("/getTongSoLuongNhanVien")
+	public Integer getTongSoLuongNhanVien(){
+		
+		return nhanVienRepository.getTongSoLuongTraNhanVien();
+	}
+	
+	@GetMapping("/getNhanVienLaiMayBayBoeing")
+	public List<NhanVien> getNhanVienLaiMayBayBoeing(){
+		
+		return nhanVienRepository.findNhanVienLaiMayBayBoeing();
+	}
+	
+	@GetMapping("/getNhanVienLaiMayBay747")
+	public List<NhanVien> getNhanVienLaiMayBay747(){
+		
+		return nhanVienRepository.findNhanVienLaiMayBay747();
+	}
+	
+	//Cau 12
+	@GetMapping("/getNhanVienLaiMayBayBoeingVaAirbus")
+	public List<NhanVien> getNhanVienLaiMayBayBoeingVaAirbus(){
+	
+		return nhanVienRepository.findNVCoTheLaiBoingNAirbus();
+	}
+	
+	//Cau 15
+	@GetMapping("/getTenPCLaiBoeing")
+	public List<String> getTenPCLaiBoeing(){
+	
+		return nhanVienRepository.findTenPCLaiBoeing();
 	}
 
 }

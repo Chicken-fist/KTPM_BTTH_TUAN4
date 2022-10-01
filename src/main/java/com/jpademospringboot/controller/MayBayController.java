@@ -21,5 +21,27 @@ public class MayBayController {
 	public List<MayBay> getMayBayTheoTamBay() {
 		return mayBayRepository.getMayBayByTamBay();
 	}
+	
+	@GetMapping("/getSoMayBayLoaiBoeing")
+	public Integer getSoMayBayLoaiBoeing() {
+		return mayBayRepository.getSoMayBayBoeing();
+	}
+	
+	@GetMapping("/getLoaiMayBayNhanVienHoNguyenLai")
+	public List<String> getLoaiMayBayNhanVienHoNguyenLai() {
+		return mayBayRepository.getLoaiMayBayNhanVienHoNguyenLai();
+	}
+	
+	//cau 11
+	@GetMapping("/getMaMBNguyenLai")
+	public List<Integer> getMaMBNguyenLai() {
+		return mayBayRepository.findMaMBNguyenLai();
+	}
+	
+	//Cau 13
+	@GetMapping("/getLoaiMayBayVN280")
+	public List<String> getLoaiMayBayVN280() {
+		return mayBayRepository.findLoaiMayBayVN280();
+	}
 
 }

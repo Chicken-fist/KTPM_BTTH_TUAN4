@@ -13,21 +13,39 @@ import com.jpademospringboot.repository.ChuyenBayRepository;
 @RequestMapping("/chuyen-bay")
 @RestController
 public class ChuyenBayController {
-	
+
 	@Autowired
 	ChuyenBayRepository chuyenBayRepository;
-	
+
 	@GetMapping("/diem-den-Da-Lat")
-	public List<ChuyenBay> getDiemDenDaLat(){
-		
+	public List<ChuyenBay> getDiemDenDaLat() {
+
 		return chuyenBayRepository.findChuyenBayByGaDen("DAD");
 	}
-	
+
 	@GetMapping("/doDaiLonHon10000VaBeHon8000")
-	public List<ChuyenBay> getChuyenBayCoDoDaiLonHon10000VaBeHon8000(){
-		
+	public List<ChuyenBay> getChuyenBayCoDoDaiLonHon10000VaBeHon8000() {
+
 		return chuyenBayRepository.findChuyenBayCoDoDaiLonHon10000VaBeHon8000();
 	}
+
+	@GetMapping("/saigon-buonmethuoc")
+	public List<ChuyenBay> getChuyenBayTuSGDiBMT() {
+
+		return chuyenBayRepository.findChuyenBayTuSGDiBMT();
+	}
 	
+	@GetMapping("/xuatphatTuSaiGon")
+	public List<ChuyenBay> getChuyenBayxuatphatTuSaiGon() {
+
+		return chuyenBayRepository.findChuyenBayTuSG();
+	}
+	
+	//Cau 14
+	@GetMapping("/getChuyenBayBoiMayBayA320")
+	public List<ChuyenBay> getChuyenBayBoiMayBayA320() {
+
+		return chuyenBayRepository.findChuyenBayBoiMayBayA320();
+	}
 
 }

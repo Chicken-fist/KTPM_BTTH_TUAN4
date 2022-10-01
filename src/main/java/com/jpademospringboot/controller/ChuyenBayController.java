@@ -76,4 +76,18 @@ public class ChuyenBayController {
 		return chuyenBayRepository.findChuyenBayKhoiHanhTruoc12h();
 	}
 
+	// Cau 21
+	@GetMapping("/getSoChuyenBayGaDiTrc12h")
+	public List<Object> getSoChuyenBayGaDiTrc12h() {
+
+		return chuyenBayRepository.findSoChuyenBayGaDiTrc12h();
+	}
+
+	// Cau 28
+	@GetMapping("/getChuyenBayLaBoeing")
+	public List<ChuyenBay> getChuyenBayLaBoeing() {
+
+		return chuyenBayRepository.findChuyenBayLaBoeing();
+	}
+
 }

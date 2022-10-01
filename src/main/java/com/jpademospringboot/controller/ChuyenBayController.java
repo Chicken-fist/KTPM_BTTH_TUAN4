@@ -34,18 +34,46 @@ public class ChuyenBayController {
 
 		return chuyenBayRepository.findChuyenBayTuSGDiBMT();
 	}
-	
+
 	@GetMapping("/xuatphatTuSaiGon")
 	public List<ChuyenBay> getChuyenBayxuatphatTuSaiGon() {
 
 		return chuyenBayRepository.findChuyenBayTuSG();
 	}
-	
-	//Cau 14
+
+	// Cau 14
 	@GetMapping("/getChuyenBayBoiMayBayA320")
 	public List<ChuyenBay> getChuyenBayBoiMayBayA320() {
 
 		return chuyenBayRepository.findChuyenBayBoiMayBayA320();
+	}
+
+	// Cau 17
+	@GetMapping("/getDuongBayDiThang")
+	public List<ChuyenBay> getDuongBayDiThang() {
+
+		return chuyenBayRepository.findDuongBayDiThang();
+	}
+
+	// Cau 18
+	@GetMapping("/getChuyenBayTuMoiGa")
+	public List<Object> getChuyenBayTuMoiGa() {
+
+		return chuyenBayRepository.findChuyenBayTuMoiGa();
+	}
+
+	// Cau 19
+	@GetMapping("/getChiPhiChuyenBayMoiGa")
+	public List<Object> getChiPhiChuyenBayMoiGa() {
+
+		return chuyenBayRepository.findChiPhiChuyenBayMoiGa();
+	}
+
+	// Cau 20
+	@GetMapping("/getChuyenBayKhoiHanhTruoc12h")
+	public List<ChuyenBay> getChuyenBayKhoiHanhTruoc12h() {
+
+		return chuyenBayRepository.findChuyenBayKhoiHanhTruoc12h();
 	}
 
 }

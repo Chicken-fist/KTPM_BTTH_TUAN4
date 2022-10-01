@@ -35,5 +35,9 @@ public interface MayBayRepository extends JpaRepository<MayBay, Integer> {
 			+ " where MaCB like 'VN280') ", nativeQuery = true)
 	List<String> findLoaiMayBayVN280();
 	
+	//Cau 16
+	@Query(value = "select m.MaMB,Loai, count(MaNV) as 'TongPhiCong' from maybay m left join chungnhan c on m.MaMB = c.MaMB where c.MaNV is not null \r\n"
+			+ "	group by m.MaMB,Loai ", nativeQuery = true)
+	List<Object> findMayBayVoiTongSoNguoi();
 
 }

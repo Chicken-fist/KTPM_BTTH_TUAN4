@@ -43,5 +43,11 @@ public class MayBayController {
 	public List<String> getLoaiMayBayVN280() {
 		return mayBayRepository.findLoaiMayBayVN280();
 	}
+	
+	//Cau 16
+		@GetMapping("/getMayBayVoiTongSoNguoi")
+		public List<Object> getMayBayVoiTongSoNguoi() {
+			return mayBayRepository.findMayBayVoiTongSoNguoi();
+		}
 
 }
